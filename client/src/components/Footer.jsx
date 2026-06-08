@@ -5,7 +5,10 @@ const Footer = () => {
     <footer className="px-6 md:px-16 lg:px-24 xl:px-32 pt-8 w-full text-gray-500 mt-20">
       <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6">
         <div className="md:max-w-96">
-          <img className="h-9" src={assets.logo} alt="logo" />
+          <div className="flex items-center gap-2 mb-6">
+            <img src={assets.favicon} alt="logo" className="h-8" />
+            <span className="text-xl font-bold text-gray-800">SmartGenAI</span>
+          </div>
           <p className="mt-6 text-sm">
             Experience the power of AI with SmartGenAI. <br /> Transform you
             content creation with our suite of premium AI tools. Write articles,

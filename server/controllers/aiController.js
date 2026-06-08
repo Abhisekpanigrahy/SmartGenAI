@@ -20,7 +20,7 @@ export const generateArticle = async (req, res) => {
 
     if (plan !== "premium" && free_usage >= 10) {
       return res.json({
-        succes: false,
+        success: false,
         message: "Limit reached. Upgrade to continue.",
       });
     }
@@ -51,8 +51,17 @@ export const generateArticle = async (req, res) => {
 
     res.json({ success: true, content });
   } catch (error) {
-    console.log(error.message);
-    res.json({ success: false, message: error.message });
+    console.error("AI Generation Error:", error);
+    const statusCode = error.status || 500;
+    const errorMessage =
+      statusCode === 429
+        ? "AI Rate limit reached. Please try again in a minute."
+        : error.message || "An error occurred during AI generation";
+
+    res.status(statusCode).json({
+      success: false,
+      message: errorMessage,
+    });
   }
 };
 
@@ -91,8 +100,17 @@ export const generateBlogTitle = async (req, res) => {
 
     res.json({ success: true, content });
   } catch (error) {
-    console.log(error.message);
-    res.json({ success: false, message: error.message });
+    console.error("Blog Title Error:", error);
+    const statusCode = error.status || 500;
+    const errorMessage =
+      statusCode === 429
+        ? "AI Rate limit reached. Please try again in a minute."
+        : error.message || "An error occurred during AI generation";
+
+    res.status(statusCode).json({
+      success: false,
+      message: errorMessage,
+    });
   }
 };
 

@@ -1,7 +1,11 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/api/(.*)",
+      "destination": "https://smart-gen-ai-backend-ten.vercel.app/api/$1"
+    },
+    {
+      "source": "/((?!api/).*)",
       "destination": "/"
     }
   ]

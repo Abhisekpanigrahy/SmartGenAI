@@ -15,12 +15,15 @@ const Layout = () => {
   return user ? (
     <div className="flex flex-col items-start justify-start h-screen">
       <nav className="w-full px-8 min-h-14 flex items-center justify-between border-b border-gray-200">
-        <img
+        <div
           onClick={() => navigate("/")}
-          src={assets.logo}
-          alt="logo"
-          className="cursor-pointer w-32 sm:w-44"
-        />
+          className="flex items-center gap-2 cursor-pointer"
+        >
+          <img src={assets.favicon} alt="logo" className="w-8 sm:w-10" />
+          <span className="text-xl sm:text-2xl font-bold text-gray-800">
+            SmartGenAI
+          </span>
+        </div>
         {sidebar ? (
           <X
             onClick={() => setSidebar(false)}

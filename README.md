@@ -1,11 +1,11 @@
 <div align="center">
 
-# QUICKAI ⚡
+# SmartGenAI ⚡
 
 AI-Powered Content Generation at Your Fingertips
 
-![Last Commit](https://img.shields.io/github/last-commit/elyse502/QuickAI?style=flat-square) 
-![Languages](https://img.shields.io/github/languages/top/elyse502/QuickAI?style=flat-square&color=blue)
+![Last Commit](https://img.shields.io/github/last-commit/Abhisekpanigrahy/SmartGenAI?style=flat-square) 
+![Languages](https://img.shields.io/github/languages/top/Abhisekpanigrahy/SmartGenAI?style=flat-square&color=blue)
 ![License](https://img.shields.io/badge/license-ISC-blue?style=flat-square)
 ![Version](https://img.shields.io/badge/version-1.0.0-success?style=flat-square)
 
@@ -19,7 +19,7 @@ AI-Powered Content Generation at Your Fingertips
 ![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=flat-square&logo=clerk&logoColor=white)
 
 ## LIVE - DEMO 🌐
-Visit the 👉 [_LINK 🔗_](https://quick-ai-gray-eight.vercel.app/)
+Visit the 👉 [_LINK 🔗_](https://smart-gen-ai-demo.vercel.app/)
 
 </div>
 
@@ -47,7 +47,7 @@ Visit the 👉 [_LINK 🔗_](https://quick-ai-gray-eight.vercel.app/)
 
 ## Overview
 
-QUICKAI is a comprehensive AI SaaS platform that provides:
+SmartGenAI is a comprehensive AI SaaS platform that provides:
 
 - 🎨 AI Image Generation and Editing
 - 📝 Intelligent Content Creation
@@ -119,7 +119,7 @@ Built with the PERN stack (PostgreSQL, Express, React, Node.js) and integrated w
 ## Architecture
 
 ```json
-QuickAI/
+SmartGenAI/
 ├── client/                 # React Frontend
 │   ├── src/
 │   │   ├── assets/        # Static assets
@@ -178,8 +178,8 @@ QuickAI/
 
 1. Clone the repository:
 ```console
-git clone https://github.com/elyse502/QuickAI.git
-cd QuickAI
+git clone https://github.com/Abhisekpanigrahy/SmartGenAI.git
+cd SmartGenAI
 ```
 
 2. Install client dependencies:
@@ -272,7 +272,7 @@ cd client && npm run dev
 ## Deployment
 
 ### Frontend (Vercel)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2FQuickAI%2Ftree%2Fmain%2Fclient)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAbhisekpanigrahy%2FSmartGenAI%2Ftree%2Fmain%2Fclient)
 
 ### Backend (Render/Vercel)
 Deploy with environment variables configured for:
@@ -313,32 +313,32 @@ We welcome contributions! Please follow these steps:
 
 ## License
 
-Distributed under the ISC License. See [`LICENSE`](https://github.com/elyse502/QuickAI/blob/main/LICENSE) for more information.
+Distributed under the ISC License. See [`LICENSE`](https://github.com/Abhisekpanigrahy/SmartGenAI/blob/main/LICENSE) for more information.
 
 ---
 
 ## Support
 
-For support, email _elyseniyibizi502@gmail.com_ or create an issue in the GitHub repository.
+For support, email _abhisekpanigrahy79@gmail.com_ or create an issue in the GitHub repository.
 
 ---
 
 ## 📞 Contact
 For any questions or support, please contact:
-- [**NIYIBIZI Elysée**](https://linktr.ee/niyibizi_elysee)👨🏿‍💻 | [Github](https://github.com/elyse502) | [Linkedin](https://www.linkedin.com/in/niyibizi-elys%C3%A9e/) | [Twitter](https://twitter.com/Niyibizi_Elyse).
-- **Email**: <elyseniyibizi502@gmail.com>
+- [**Abhisek Panigrahy**](https://github.com/Abhisekpanigrahy) 👨‍💻 | [Github](https://github.com/Abhisekpanigrahy) | [Linkedin](https://linkedin.com/in/abhisek-panigrahy-fitz)
+- **Email**: abhisekpanigrahy79@gmail.com
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/niyibizi-elys%C3%A9e/) [![@phenrysay](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/Niyibizi_Elyse) [![pH-7](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/elyse502)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/abhisek-panigrahy-fitz) [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abhisekpanigrahy)
 
 ---
 
 <div align="center">
 
-**QUICKAI** - Supercharge your creativity with AI! 🚀
+**SmartGenAI** - Supercharge your creativity with AI! 🚀
 
 *Built with ❤️ using the PERN stack and cutting-edge AI technologies.*
 
-**Made with ❤️ by <i>[Elysée NIYIBIZI](https://elyse502.github.io/Elysee-Portfolio/)</i>**
+**Made with ❤️ by <i>[Abhisek Panigrahy](https://github.com/Abhisekpanigrahy)</i>**
 
 [⬆ Back to Top](#table-of-contents)
 

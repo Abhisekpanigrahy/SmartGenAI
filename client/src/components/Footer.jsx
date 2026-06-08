@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="md:max-w-96">
           <img className="h-9" src={assets.logo} alt="logo" />
           <p className="mt-6 text-sm">
-            Experience the power of AI with QuickAi. <br /> Transform you
+            Experience the power of AI with SmartGenAI. <br /> Transform you
             content creation with our suite of premium AI tools. Write articles,
             generate images, and enhance your workflow.
           </p>
@@ -55,8 +55,8 @@ const Footer = () => {
       </div>
       <p className="pt-4 text-center text-xs md:text-sm pb-5">
         Copyright 2025 ©{" "}
-        <a target="_blank" href="https://elyse502.github.io/Elysee-Portfolio">
-          ElyséeDev
+        <a target="_blank" href="https://github.com/Abhisekpanigrahy">
+          Abhisek Panigrahy
         </a>
         . All Right Reserved.
       </p>

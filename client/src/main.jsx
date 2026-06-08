@@ -6,7 +6,7 @@ import { ClerkProvider } from "@clerk/clerk-react";
 import axios from "axios";
 
 // Axios Configuration
-const BACKEND_URL = "https://smart-gen-ai-backend.vercel.app";
+const BACKEND_URL = "https://smart-genai-backend.vercel.app";
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL || BACKEND_URL;
 
 // Import your Publishable Key

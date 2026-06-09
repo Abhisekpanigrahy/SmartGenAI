@@ -67,7 +67,7 @@ export const generateArticle = async (req, res) => {
 
 export const generateBlogTitle = async (req, res) => {
   try {
-    const { userId } = req.auth();
+    const { userId } = req.auth;
     const { prompt } = req.body;
     const plan = req.plan;
     const free_usage = req.free_usage;
@@ -116,13 +116,13 @@ export const generateBlogTitle = async (req, res) => {
 
 export const generateImage = async (req, res) => {
   try {
-    const { userId } = req.auth();
+    const { userId } = req.auth;
     const { prompt, publish } = req.body;
     const plan = req.plan;
 
     if (plan !== "premium") {
       return res.json({
-        succes: false,
+        success: false,
         message: "This feature is only available for premium subscriptions",
       });
     }
@@ -151,20 +151,29 @@ export const generateImage = async (req, res) => {
 
     res.json({ success: true, content: secure_url });
   } catch (error) {
-    console.log(error.message);
-    res.json({ success: false, message: error.message });
+    console.error("Image Generation Error:", error);
+    const statusCode = error.status || error.response?.status || 500;
+    const errorMessage =
+      statusCode === 429
+        ? "Image API Rate limit reached. Please try again later."
+        : error.message || "An error occurred during image generation";
+
+    res.status(statusCode).json({
+      success: false,
+      message: errorMessage,
+    });
   }
 };
 
 export const removeImageBackground = async (req, res) => {
   try {
-    const { userId } = req.auth();
+    const { userId } = req.auth;
     const image = req.file;
     const plan = req.plan;
 
     if (plan !== "premium") {
       return res.json({
-        succes: false,
+        success: false,
         message: "This feature is only available for premium subscriptions",
       });
     }
@@ -182,21 +191,21 @@ export const removeImageBackground = async (req, res) => {
 
     res.json({ success: true, content: secure_url });
   } catch (error) {
-    console.log(error.message);
-    res.json({ success: false, message: error.message });
+    console.error("Background Removal Error:", error);
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
 export const removeImageObject = async (req, res) => {
   try {
-    const { userId } = req.auth();
+    const { userId } = req.auth;
     const { object } = req.body;
     const image = req.file;
     const plan = req.plan;
 
     if (plan !== "premium") {
       return res.json({
-        succes: false,
+        success: false,
         message: "This feature is only available for premium subscriptions",
       });
     }
@@ -212,20 +221,20 @@ export const removeImageObject = async (req, res) => {
 
     res.json({ success: true, content: imageUrl });
   } catch (error) {
-    console.log(error.message);
-    res.json({ success: false, message: error.message });
+    console.error("Object Removal Error:", error);
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
 export const resumeReview = async (req, res) => {
   try {
-    const { userId } = req.auth();
+    const { userId } = req.auth;
     const resume = req.file;
     const plan = req.plan;
 
     if (plan !== "premium") {
       return res.json({
-        succes: false,
+        success: false,
         message: "This feature is only available for premium subscriptions",
       });
     }
@@ -255,7 +264,16 @@ export const resumeReview = async (req, res) => {
 
     res.json({ success: true, content });
   } catch (error) {
-    console.log(error.message);
-    res.json({ success: false, message: error.message });
+    console.error("Resume Review Error:", error);
+    const statusCode = error.status || 500;
+    const errorMessage =
+      statusCode === 429
+        ? "AI Rate limit reached. Please try again in a minute."
+        : error.message || "An error occurred during resume review";
+
+    res.status(statusCode).json({
+      success: false,
+      message: errorMessage,
+    });
   }
 };
